@@ -333,8 +333,7 @@ header ul a:hover {
 
 
 /* Responsive Code */
-/* Extra small devices (phones) */
-@media (max-width: 575px) OR (min-width: 576px) {
+@media (max-width: 575px) {
     .open-nav {
         display: inline-block;
     }
@@ -429,11 +428,108 @@ header ul a:hover {
     }
 }
 
-/* Medium devices (tablets) */
+@media (min-width: 576px) {
+    .open-nav {
+        display: inline-block;
+    }
+
+    header nav {
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--white-color);
+        transition: all 0.3s linear;
+    }
+
+    header nav.showNav {
+        visibility: visible;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 0.3s linear;
+    }
+
+    nav ul {
+        height: inherit;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home>.home-content {
+        width: 100%;
+        margin: 30px;
+    }
+
+    .home>.home-content h1 {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+
+    .skills {
+        padding: 30px;
+    }
+
+    .skills .skills-details {
+        margin: 26px 0 36px 0;
+        flex-flow: column;
+    }
+
+    .skills .skills-details .skills-content,
+    .skills .skills-details .skills-listing {
+        width: 100%;
+    }
+
+    .about {
+        padding: 30px;
+    }
+
+    .about .about-content {
+        flex-flow: column;
+    }
+
+    .about .about-content>img {
+        width: 100%;
+    }
+
+    .about .about-content>p {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 30px;
+    }
+
+    .contact .contact-details {
+        flex-flow: column;
+    }
+
+    .contact .contact-details .contact-content,
+    .contact .contact-details .contact-form {
+        width: 100%;
+    }
+
+    .contact .contact-details .contact-form .form-first-row {
+        width: 100%;
+        flex-flow: column;
+        gap: 10px;
+    }
+
+    .contact .contact-details .contact-form form input:not(input[name='subject']) {
+        width: 100%;
+    }
+}
+
 @media (min-width: 768px) {
-    .close-nav, .open-nav{
+
+    .close-nav,
+    .open-nav {
         display: none;
     }
+
     header nav,
     header nav.showNav {
         visibility: visible;
@@ -441,6 +537,7 @@ header ul a:hover {
         width: fit-content;
         height: inherit;
     }
+
     header ul {
         flex-flow: row;
     }
@@ -454,11 +551,11 @@ header ul a:hover {
     }
 }
 
-/* Large devices (desktops) */
 @media (min-width: 992px) {
     .open-nav {
         display: none;
     }
+
     .home>.home-content {
         width: 60%;
         margin: 30px;
@@ -517,7 +614,6 @@ header ul a:hover {
     }
 }
 
-/* Extra large devices (large desktops) */
 @media (min-width: 1200px) {
 
     header,
@@ -529,7 +625,6 @@ header ul a:hover {
     }
 }
 
-/* Extra extra large devices (larger desktops) */
 @media (min-width: 1400px) {
 
     header,
