@@ -126,8 +126,13 @@ header ul a:hover {
 
 .close-nav {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 40px;
+    border: none;
+    outline: none;
+    font-size: 150%;
+    color: red;
+    background-color: transparent;
 }
 
 
